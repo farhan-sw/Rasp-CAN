@@ -23,7 +23,7 @@ with can.Bus(interface='socketcan',
         motor_1 = data[10:10+16]
         motor_2 = data[26:26+16]
         int_a = data[42:42+16]
-        lim_sw = data[58:58+6]     
+        lim_sw = data[58:58+6]        
 
         # DATA
         print(f"[{msg.arbitration_id}] {time.time()}")
@@ -32,5 +32,5 @@ with can.Bus(interface='socketcan',
         print(f"mode    : {BitArray(bin=mode).int} -> {mode}")
         print(f"m1      : {BitArray(bin=motor_1).int} -> {motor_1}")
         print(f"m2      : {BitArray(bin=motor_2).int} -> {motor_2}")
-        print(f"int_a   : {BitArray(bin=int_a).int} -> {int_a}")    
-        print(f"lim_sw  : {BitArray(bin=lim_sw).int} -> {lim_sw}")  
+        print(f"int_a   : {BitArray(bin=int_a).int} -> {int_a}")
+        print(f"lim_sw  : {BitArray(bin=lim_sw).int} -> {lim_sw}\n")
