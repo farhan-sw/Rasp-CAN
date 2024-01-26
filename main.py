@@ -89,4 +89,4 @@ def send(target : int, can_from_id : int, is_req : bool, mode : bool, motor_1 : 
 
 if __name__ == "__main__":
     read()
-    send(1, 2, 0, 0, 16, 20, 35)
+    send(1, 2, 0, 0, 16, 20, 35, 1, 1, 1, 0, 0, 0)
